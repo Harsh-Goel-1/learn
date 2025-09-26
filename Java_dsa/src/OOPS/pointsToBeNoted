@@ -1,0 +1,13 @@
+classes do not take up space in heap, they are just blueprints through which objects are created in heap.
+
+'this' refers to the current object
+
+finalize() is called by gc to destroy objects
+
+in java internal implementation, every class that you create is inherited from Object class,
+it is not considered inheritance or something though
+
+super() calls the constructor of immediate parent class
+
+this.thingy checks if thingy exists in the child, if not then check in parent
+
