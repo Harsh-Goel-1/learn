@@ -1,0 +1,13 @@
+trees have log n insert/delete/search,
+scalable, no re structuring on inc data size
+
+used in file systems, databases, network routing path finding algo, solving maths
+decision trees in ml, compression of files, heaps, graphs
+
+terminology - child parent edge height level siblings
+complete binary tree -> all levels full, last level full from left to right
+full/strict binary tree -> either 0 or 2 children
+perfect binary tree -> yeah, exactly
+skewed -> yeah that worst case asshole, only 1 child
+height balanced -> avg height log n   eg- avl, red, black
+ordered binary tree, each node has property, eg- bst

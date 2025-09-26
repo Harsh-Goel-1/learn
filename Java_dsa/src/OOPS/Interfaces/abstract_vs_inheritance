@@ -1,0 +1,31 @@
+class can inherit only a single super class but can implement multiple interfaces
+
+inheritance only goes up vertically(only one), implementation can go up to multiple interfaces
+
+abstract classes and their children have a hierarchy of classes and functions,
+both parent and child classes need to be there at compile time for java compiler to check compatibility,
+the functions of parent classes are pushed higher and higher to be provided to the children classes,
+--> runtime overhead
+
+interfaces solve this problem by disconnecting the definition of a method from this hierarchy of inheritance,
+the method are implemented in the class body only,
+even if two classes are completely independent in terms of who their parent is can implement the same interface
+
+interface A extends interface B is just interface B having functions of both A and B,
+that it will force the child class to implement
+
+internally, override is also an interface
+--> overridden methods need to have same or better access modifier <--
+you cannot override a protected method to be private, it can either be protected or public
+
+--> interfaces have default keyword to define the default code for function <--
+you do not need to implement the default methods
+default void start() {
+    System.out.println("Something starts");
+}
+again, this might cause the same issue as in abstract classes so it is usually avoided,
+sometimes you want to add default to function so that it is not forced to be implemented
+(sounds dumb and weird tbh)
+
+--> interfaces can have static methods but they need to have a body <--
+Engine.fun() will be called via interface name

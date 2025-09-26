@@ -1,0 +1,26 @@
+ls  cd  pwd cat vim/vi mkdir touch
+git init
+git add .
+git reset @hash_of_history (there exists a --hard flag for reset, better not use it brainlessly)
+git stash after git add .
+git stash clear to perm delete,also irrecoverable
+git commit -m ""
+git remote add origin "@url" (saving url with name origin)
+git push origin main (where to push, what to push)
+git remote -v (shows saved urls)
+git branch feature
+git checkout feature
+git merge feature (can use the --no-commit flag on this one)
+https://learngitbranching.js.org/ is the site for graphic git kunal_dsa showed
+git clone @url (git remote add upstream @url to save the place from where you forked)
+use -f at end of git push origin main to force push in case you reset the repo to an old commit and want the same for origin which is ahead of commits
+git fetch --all --prune after doing checkout main (all means all the branches, prune means branches that are deleted will also be fetched)
+git reset --hard upstream/main to reset local main to upstream/main
+git pull upstream main is basically git fetch + git merge
+
+imagine you want the 4 commits in your log to show up as 1 commit, what do you do?
+1) you just do git reset @hex(of the 5th last commit) and all the changes go to unstaged area then stage em all and commit
+2) git rebase -i @hex(of the 5th last commit) //now squash pick reword or whatever the fuck u want
+   -i means interactive environment
+   basically, squash merges the commit to the picked one above it
+merge conflicts may occure if a file is edited in both main and branch, address em manually
